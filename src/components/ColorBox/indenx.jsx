@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 ColorBox.propTypes = {};
 function getRandomColor() {
-  const Color_list = ["deeplink", "green", "red", "yellow", "orange", "black"];
+  const Color_list = ["black", "blue", "green", "yellow", "deeppink"];
   const RandomIndex = Math.trunc(Math.random() * 5);
   return Color_list[RandomIndex];
 }
