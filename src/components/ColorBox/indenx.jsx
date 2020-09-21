@@ -1,13 +1,26 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 
 ColorBox.propTypes = {};
+function getRandomColor() {
+  const Color_list = ["deeplink", "green", "red", "yellow", "orange", "black"];
+  const RandomIndex = Math.trunc(Math.random() * 5);
+  return Color_list[RandomIndex];
+}
 
 function ColorBox(props) {
-  const [color, setColor] = useState("deeplink");
+  const [color, setColor] = useState("green");
+  function HandeColorBox() {
+    // get randome color ->setColor
+    const newColor = getRandomColor();
+    setColor(newColor);
+  }
   return (
-    <div className="color-box" style={{ background_color: color }}>
-      helo
+    <div
+      className="color-box"
+      style={{ backgroundColor: color }}
+      onclick={HandeColorBox}
+    >
+      ColorBox
     </div>
   );
 }
